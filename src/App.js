@@ -22,8 +22,13 @@ function App() {
           onClick={handleClick}
           disabled={loading}
         >
-          {loading ? "Proszę czekać..." : "Czy jesteś robotem?"}
+          Czy jesteś robotem?
         </button>
+        {loading && (
+          <div className="spinner-container">
+            <div className="spinner"></div>
+          </div>
+        )}
         {message && <p className="captcha-message">{message}</p>}
       </div>
     </div>
